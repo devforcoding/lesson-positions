@@ -6,6 +6,11 @@ body {
     font-family: Lato, Arial, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
 header {
     padding: 24px 16px;
     position: fixed;
@@ -38,6 +43,12 @@ footer {
     padding: 80px 0 0;
 }
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .bg-primary  {
     background-color: #18bc9c;
 }
@@ -45,6 +56,7 @@ footer {
 .bg-secondary {
     background-color: #2c3e50;
 }
+
 
 .logo, nav {
     display: inline-block;
@@ -78,17 +90,20 @@ footer {
 .main-nav .nav-link:focus
 {
     color: #18bc9c;
-}
-
-.container {
-    text-align: center;
-    font-size: 0;
+    text-decoration: none;
 }
 
 .portfolio-item{
     position: relative;
     display: inline-block;
-    width: 33%;
+    width: 345px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+
+.portfolio-item:nth-last-child(3n+1){
+    margin-right: 0;
 }
 
 .portfolio-item img {
@@ -132,25 +147,171 @@ footer {
 .profile h1 {
     font-size: 80px;
     text-transform: uppercase;
-    color: #ffffff;
     text-align: center;
-    font-family: Montserrat, Arial, sans-serif;
+    color: #ffffff;
 }
 
-hr.star-light {
+.star-light {
     max-width: 240px;
     padding: 0;
     text-align: center;
     border: none;
-    border-top: #fff solid .25rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    border-top: #fff solid 4px;
+    margin: 40px auto;
 }
 
-.profile h2 {
+.star-light::after {
+    color: #ffffff;
+    background-color: #18bc9c;
+}
+
+.star-dark::after {
+    color: #2c3e50;
+    background-color: #ffffff;
+}
+
+.star-light::after,
+.star-dark::after {
+    position: relative;
+    top: -18px;
+    content: '\f005';
+    font-family: FontAwesome;
+    font-weight: 900;
+    font-size: 34px;
+    padding: 0 10px;
+}
+
+.star-dark {
+    max-width: 240px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-top: #2c3e50 solid 4px;
+    margin: 40px auto;
+    color: #2c3e50;
+}
+
+.profile span {
+    display: block;
+    font-size: 28px;
     text-align: center;
     color: #ffffff;
-    font-family: Lato, Arial, sans-serif;
-    font-size: 1.75em;
-    font-weight: 300; 
+}
+
+.portfolio {
+    font-size: 0;
+}
+
+.portfolio h2 {
+    font-size: 48px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 48px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-text {
+    display: inline-block;
+    color: #ffffff;
+    width: 355px;
+    vertical-align: top;
+    margin-right: 40px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.about-text:last-child {
+    margin-right: 0;
+}
+
+.about-button {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ffffff;
+    min-width: 235px;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.about-button:hover {
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    transition-property: color, background-color;
+    transition: .3s linear;
+}
+
+.footer-info {
+    display: inline-block;
+    color: #ffffff;
+    width: 355px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.footer-info a[href="http://startbootstrap.com"]
+{
+    color: #18bc9c;
+    text-decoration: none;
+}
+
+.footer-info a[href="http://startbootstrap.com"]:hover
+{
+    text-decoration: underline;
+}
+
+.footer-info h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.footer ul {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer li {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.footer-social  {
+    display: inline-block;
+    vertical-align: middle;
+    color: #f8f9fa;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    font-size: 26px;
+    line-height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+.footer-social:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
 }
